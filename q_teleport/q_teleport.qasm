@@ -10,7 +10,7 @@ cx q[1], q[2];
 barrier q[0];
 barrier q[1];
 barrier q[2];
-x q[0];
+//x q[0];
 barrier q[0];
 barrier q[1];
 barrier q[2];
