@@ -14,7 +14,7 @@ This project implements and demonstrates the **Quantum Teleportation** protocol 
   - Analysis of the results to verify successful teleportation.
 
 - **`q_teleport.qasm`**: The OpenQASM File that contaims the code for designing the quantum circuit for Quantum Teleportation protocol.
-  - Uncomment line 9 to initialize 'q[0]' as |1>, which otherwise is initialized as |0>.
+  - Uncomment line 13 to initialize 'q[0]' as |1>, which otherwise is initialized as |0>.
 Paste the code in the OpenQASM editor in the IBM Composer to generate the quantum circuit.
 
 ## Prerequisites
