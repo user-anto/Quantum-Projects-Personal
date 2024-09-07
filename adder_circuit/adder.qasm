@@ -1,0 +1,44 @@
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg n0[2];
+qreg n1[2];
+qreg n2[2];
+qreg carry_out[1];
+qreg carry_in[1];
+
+//x n0[0];
+//x n0[1];
+//x n1[0];
+//x n1[1];
+//x n2[0];
+//x n2[1];
+barrier n0[0];
+barrier n0[1];
+barrier n1[0];
+barrier n1[1];
+barrier n2[0];
+barrier n2[1];
+ccx n0[0], n0[1], carry_out[0];
+cx n0[0], n0[1];
+reset n0[0];
+ccx n1[0], carry_out[0], carry_in[0];
+cx carry_out[0], n1[0];
+reset carry_out[0];
+cx carry_in[0], carry_out[0];
+ccx n1[0], n1[1], carry_out[0];
+reset carry_in[0];
+cx n1[0], n1[1];
+reset n1[0];
+ccx n2[0], carry_out[0], carry_in[0];
+cx carry_out[0], n2[0];
+reset carry_out[0];
+cx carry_in[0], carry_out[0];
+ccx n2[0], n2[1], carry_out[0];
+reset carry_in[0];
+cx n2[0], n2[1];
+reset n2[0];
+barrier n0[1];
+barrier n1[1];
+barrier n2[1];
+
+// @columns [0,0,0,0,0,0,1,1,1,1,1,1,2,3,4,5,6,7,8,9,9,10,11,12,13,14,15,16,16,17,18,19,19,19]
