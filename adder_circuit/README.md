@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates the design and implementation of a quantum adder using Qiskit. A quantum adder circuit adds two quantum registers and produces the result in the form of a quantum state. The project explores the creation of a quantum adder using controlled quantum gates and registers.
+This project demonstrates the design and implementation of a quantum adder circuit using Qiskit. The circuit adds two quantum registers and produces the result in the form of a quantum state. The project explores the creation of a quantum adder circuit using controlled quantum gates and registers.
 
 ## Project Structure
 
@@ -68,11 +68,11 @@ def get_qc_for_adder(bits):
 5. **Measurement**:
     - The sum bits (result of the addition) are measured at the end of the process. The function measures every second qubit in the range, where the sum is stored.
 
-### Technical Considerations
+### Technical Considerations:
 
 - **Gate Complexity**: The circuit primarily uses controlled gates such as CCX (Toffoli) and CX (CNOT), which introduce a level of complexity due to the need for multiple qubit interactions. These gates are crucial for implementing logical operations like addition in a quantum system.
   
-- **Error Mitigation**: The `qc.reset()` statements are used to clear the qubits after an operation to prevent any interference from leftover quantum states. This ensures that each operation in the loop works with clean qubits, minimizing potential quantum error buildup.
+- **Error Mitigation**: The `qc.reset()` statements are used to clear the qubits after an operation to prevent any interference from leftover quantum states. This ensures minimization of potential quantum error buildup.
 
 - **Optimization Potential**: While this implementation works for small numbers of qubits, further optimization using Qiskit's transpilation tools (e.g., optimization levels, dynamical decoupling) may improve performance for larger circuits. Additionally, reducing gate depth and using error correction techniques would improve the reliability of the circuit on noisy quantum hardware.
 
