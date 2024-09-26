@@ -1,4 +1,4 @@
-# Grover's Algorithm Project
+# Grover's Search Algorithm Project
 
 ## Overview
 
