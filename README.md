@@ -9,5 +9,6 @@ This is a repository where I upload my personal quantum computing projects. I st
 Projects-<br>
 1. Quantum Teleportation<br>
 2. Superdense Coding<br>
+3. Quantum Adder Circuit<br>
 <br>
 These are just small implementations of what I have learned till now.
